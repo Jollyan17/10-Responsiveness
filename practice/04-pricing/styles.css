@@ -84,3 +84,27 @@ img { display: block; max-width: 100%; height: auto; }
 
 /* ===== YOUR CODE — layout + responsiveness ===== */
 
+.plans{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:1rem;
+}
+.plan{
+  display:flex;
+  flex-direction:column;
+}
+.plan--featured{
+  scale:1.05;
+}
+.btn{
+  margin-top:auto;
+}
+@media (max-width: 999px){
+  .plans{
+    grid-template-columns: 1fr;
+  }
+  .plan--featured{
+    scale: 1;
+    order:-1;
+  }
+}
